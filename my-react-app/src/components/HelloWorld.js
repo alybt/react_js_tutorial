@@ -9,12 +9,15 @@ function HelloWorld({num, name}){
     
 
     return(
-        <div>
+        <div style={myStyle} >
             <div>{greeting}! {name}</div>
             <div>{introduction}</div>
             <a href ={link}> Go to Google {num}</a>
         </div>
     )
+
+    
 }
+const myStyle = {backgroundColor: 'red', padding: '10px', fontSize: '20px', color: 'blue'};
 
 export default HelloWorld
