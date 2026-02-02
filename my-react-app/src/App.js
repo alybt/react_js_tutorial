@@ -1,6 +1,7 @@
 import HelloWorld from "./components/HelloWorld";
 import './App.css';
 import Sample from "./components/Sample";
+import Navbar from "./components/Navbar";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
   return ( 
     <div className = "App">
+      <Navbar></Navbar>
       <HelloWorld num = {num} name = {name}/>
       <div>{saygoodbye} {number + number}</div>
       <div className = 'sample-css'> Hello CSS App </div>
