@@ -1,5 +1,5 @@
  
-import { useState } from 'react';
+import { use, useState } from 'react';
 import './App.css'; 
 import Navbar from "./components/Navbar"; 
 
@@ -11,6 +11,7 @@ function App() {
   
   const [students, setStudents] = useState(['Alex', 'David', 'Joe'])
  
+  const [showNotification, setShowNotification] = useState(false);
   
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,12 +23,22 @@ function App() {
     const newStudents = students.filter((student) => student !== deletingStudent);
     setStudents(newStudents);
 
+
+  }
+
+  const toggleNotification = () => {
+    setShowNotification(!showNotification);
+
   }
 
   return ( 
     <div className = "App">
       <Navbar></Navbar> 
       <br></br>
+
+      {showNotification ? <div className='notification'>This is notification</div>: ''}
+      <button onClick={(toggleNotification )}>Toggle Notification</button>
+
       <form onSubmit={handleSubmit}>
         <div>Add new Student </div>
         <input type= "text" value={name} onChange={(e) => setName(e.target.value)}/>
