@@ -1,28 +1,28 @@
-import HelloWorld from "./components/HelloWorld";
-import './App.css';
-import Sample from "./components/Sample";
-import Navbar from "./components/Navbar";
-import Greeting from "./components/Greeting";
+ 
+import { useState } from 'react';
+import './App.css'; 
+import Navbar from "./components/Navbar"; 
+
 
 
 function App() {
-  const saygoodbye = "See you again";
-  const number = 15;
-  const num = 18;
-  const name = "Aly";
-
+  
+  const [name, setName] = useState("");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert("My name is" + name);
+  }
 
   return ( 
     <div className = "App">
-      <Navbar></Navbar>
-      <HelloWorld num = {num} name = {name}/>
-      <div>{saygoodbye} {number + number}</div>
-      <div className = 'sample-css'> Hello CSS App </div>
-      <Sample> </Sample>
-
+      <Navbar></Navbar> 
       <br></br>
+      <form onSubmit={handleSubmit}>
+        <div>What's your name?</div>
+        <input type= "text" value={name} onChange={(e) => setName(e.target.value)}/>
+        <input type="submit"/>
+      </form>
 
-      <Greeting></Greeting>
 
     </div> );
 }
