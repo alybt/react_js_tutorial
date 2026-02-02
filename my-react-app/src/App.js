@@ -1,5 +1,6 @@
 import HelloWorld from "./components/HelloWorld";
 import './App.css';
+import Sample from "./components/Sample";
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <HelloWorld num = {num} name = {name}/>
       <div>{saygoodbye} {number + number}</div>
       <div className = 'sample-css'> Hello CSS App </div>
-
+      <Sample> </Sample>
     </div> );
 }
 
