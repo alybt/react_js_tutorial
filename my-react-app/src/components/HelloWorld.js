@@ -6,3 +6,5 @@ function HelloWorld(){
         <div>HelloWorld</div>
     )
 }
+
+export default HelloWorld
