@@ -1,4 +1,5 @@
 import HelloWorld from "./components/HelloWorld";
+import './App.css';
 
 
 function App() {
@@ -8,10 +9,13 @@ function App() {
   const name = "Aly";
 
 
-  return ( <div className = "App">
-    <HelloWorld num = {num} name = {name}/>
-    <div>{saygoodbye} {number + number}</div>
-     </div> );
+  return ( 
+    <div className = "App">
+      <HelloWorld num = {num} name = {name}/>
+      <div>{saygoodbye} {number + number}</div>
+      <div className = 'sample-css'> Hello CSS App </div>
+
+    </div> );
 }
 
  

@@ -13,6 +13,7 @@ function HelloWorld({num, name}){
             <div>{greeting}! {name}</div>
             <div>{introduction}</div>
             <a href ={link}> Go to Google {num}</a>
+            <div className='call-app-css'> Call App CSS Class</div>
         </div>
     )
 
