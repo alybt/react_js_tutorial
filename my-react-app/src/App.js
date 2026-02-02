@@ -18,6 +18,12 @@ function App() {
     setName('');
   }
 
+  const handleDelete = (deletingStudent) => {
+    const newStudents = students.filter((student) => student !== deletingStudent);
+    setStudents(newStudents);
+
+  }
+
   return ( 
     <div className = "App">
       <Navbar></Navbar> 
@@ -32,7 +38,7 @@ function App() {
       <h1>All Students</h1>
       <ul>
         {
-          students.map((students, index) => <li key={index}>{students}</li>)
+          students.map((student, index) => <li key={index}>{student} <button onClick={()=> handleDelete(student)}>Delete</button></li>)
         }
       </ul>
 
