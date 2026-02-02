@@ -2,6 +2,7 @@ import HelloWorld from "./components/HelloWorld";
 import './App.css';
 import Sample from "./components/Sample";
 import Navbar from "./components/Navbar";
+import Greeting from "./components/Greeting";
 
 
 function App() {
@@ -18,6 +19,11 @@ function App() {
       <div>{saygoodbye} {number + number}</div>
       <div className = 'sample-css'> Hello CSS App </div>
       <Sample> </Sample>
+
+      <br></br>
+
+      <Greeting></Greeting>
+
     </div> );
 }
 
